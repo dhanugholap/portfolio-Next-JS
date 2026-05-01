@@ -2,10 +2,10 @@ const projects = [
     {
         icon: 'fas fa-id-card',
         title: 'Personal Portfolio Website',
-        category: ['Next.js', 'JavaScript', 'CSS3'],
+        category: ['Next.js', 'JavaScript', 'CSS3', 'Web3Forms'],
         period: '2026 – Present',
-        desc: 'Designed and developed a fully responsive personal portfolio using Next.js and React.js. Features include dynamic theme switcher (White, Black, Green), smooth scroll animations with AOS, TypeAnimation for hero section, contact form with EmailJS, and sections for Skills, Projects, Certifications, Experience and more.',
-        github: 'https://github.com/dhanu07',
+        desc: 'Fully responsive personal portfolio built with Next.js. Features dynamic theme switcher (White, Black, Green), smooth AOS animations, TypeAnimation hero section, Web3Forms contact form integration, and sections for Skills, Projects, Certifications & Experience.',
+        github: 'https://github.com/dhanugholap/portfolio-Next-JS',
         live: null,
     },
     {
@@ -13,8 +13,8 @@ const projects = [
         title: 'Student Management System',
         category: ['React.js', 'REST API', 'MySQL'],
         period: 'Mar 2025 – Jun 2025',
-        desc: 'Developed a React.js-based application with dynamic CRUD operations. Designed modular and reusable components for scalability. Implemented responsive UI and integrated frontend with backend APIs for real-time data handling.',
-        github: 'https://github.com/dhanu07',
+        desc: 'React.js-based application with dynamic CRUD operations for managing student records. Modular reusable components, responsive UI, and real-time data handling via backend REST API integration.',
+        github: 'https://github.com/dhanugholap',
         live: null,
     },
 ]
@@ -40,6 +40,33 @@ export default function Portfolio() {
                                 {p.category.map(tag => (
                                     <span key={tag} className="portfolio-tag">{tag}</span>
                                 ))}
+                            </div>
+                            <div style={{ display: 'flex', gap: '10px', marginTop: '1rem' }}>
+                                <button
+                                    onClick={() => window.open(p.github, '_blank')}
+                                    style={{
+                                        display: 'inline-flex', alignItems: 'center', gap: '6px',
+                                        padding: '7px 16px', borderRadius: '20px',
+                                        border: '1px solid var(--border)', color: 'var(--text)',
+                                        fontSize: '0.78rem', fontWeight: 600,
+                                        background: 'var(--bg-card)', transition: 'all 0.2s',
+                                        cursor: 'pointer',
+                                    }}>
+                                    <i className="fab fa-github" /> GitHub
+                                </button>
+                                {p.live && (
+                                    <button
+                                        onClick={() => window.open(p.live, '_blank')}
+                                        style={{
+                                            display: 'inline-flex', alignItems: 'center', gap: '6px',
+                                            padding: '7px 16px', borderRadius: '20px',
+                                            background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+                                            color: '#fff', fontSize: '0.78rem', fontWeight: 600,
+                                            border: 'none', cursor: 'pointer', transition: 'all 0.2s',
+                                        }}>
+                                        <i className="fas fa-external-link-alt" /> Live
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>

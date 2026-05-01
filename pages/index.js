@@ -70,10 +70,10 @@ export default function Home() {
       <Hero />
       <About />
       <Stats />
-      <Services />
+      <Certifications />
       <Skills />
       <Portfolio />
-      <Certifications />
+      <Services />
       <Hobbies />
       <Experience />
       <Contact />

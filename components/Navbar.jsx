@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const links = ['Home', 'About Us', 'Services', 'Skill', 'Work', 'Certifications', 'Contact']
+const links = ['Home', 'About Us', 'Certifications', 'Skill', 'Work', 'Services', 'Contact']
 
 const themes = [
     { id: 'theme-light', color: '#ffffff', border: '#94a3b8', label: 'White' },
@@ -14,13 +14,13 @@ export default function Navbar() {
     const [open, setOpen] = useState(false)
     const [active, setActive] = useState('Home')
     const [scrolled, setScrolled] = useState(false)
-    const [currentTheme, setCurrentTheme] = useState('theme-light')
+    const [currentTheme, setCurrentTheme] = useState('dark')
     const [themeOpen, setThemeOpen] = useState(false)
     const themeRef = useRef(null)
 
     useEffect(() => {
         document.body.classList.remove(...allThemeIds)
-        document.body.classList.add('theme-light')
+        document.body.classList.add('dark')
     }, [])
 
     // Close dropdown when clicking outside
@@ -37,7 +37,7 @@ export default function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20)
-            const sections = ['home', 'about', 'services', 'skill', 'work', 'certifications', 'contact']
+            const sections = ['home', 'about', 'certifications', 'skill', 'work', 'services', 'contact']
             for (const id of sections) {
                 const el = document.getElementById(id)
                 if (el) {

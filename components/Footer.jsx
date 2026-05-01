@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="footer-logo"><span className="first-name">Dhananjay</span><span>Gholap</span></div>
                     <p>Software Engineer — Python FullStack Developer With Ai  </p>
                     <div className="footer-socials">
-                        <a href="https://github.com/dhanu07" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                        <a href="https://github.com/dhanugholap" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
                         <a href="https://linkedin.com/in/dhanu07" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                         <a href="https://instagram.com/30.dhanu_" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
                     </div>

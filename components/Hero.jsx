@@ -101,7 +101,7 @@ export default function Hero() {
                     </a>
                 </div>
                 <div className="hero-socials" data-aos="fade-up" data-aos-delay="600">
-                    <a href="https://github.com/dhanu07" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                    <a href="https://github.com/dhanugholap" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/dhanu07" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                     <a href="https://instagram.com/30.dhanu_" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
                 </div>

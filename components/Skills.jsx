@@ -1,14 +1,14 @@
 const skillList = [
-    { name: 'React JS', level: 92 },
-    { name: 'Next JS', level: 87 },
-    { name: 'JavaScript (ES6+)', level: 88 },
-    { name: 'TypeScript', level: 80 },
-    { name: 'Python', level: 90 },
-    { name: 'HTML5 / CSS3', level: 95 },
-    { name: 'MySQL', level: 85 },
-    { name: 'Redux', level: 78 },
-    { name: 'REST API Integration', level: 83 },
-    { name: 'Git / GitHub', level: 85 },
+    { name: 'React JS', level: 92, icon: 'fab fa-react', color: '#61dafb' },
+    { name: 'Next JS', level: 87, icon: 'fas fa-code', color: 'var(--primary)' },
+    { name: 'JavaScript (ES6+)', level: 88, icon: 'fab fa-js', color: '#f7df1e' },
+    { name: 'TypeScript', level: 80, icon: 'ts-badge', color: '#3178c6' },
+    { name: 'Python', level: 90, icon: 'fab fa-python', color: '#3776ab' },
+    { name: 'HTML5 / CSS3', level: 95, icon: 'fab fa-html5', color: '#e34f26' },
+    { name: 'MySQL', level: 85, icon: 'fas fa-database', color: '#00758f' },
+    { name: 'Redux', level: 78, icon: 'fas fa-layer-group', color: '#764abc' },
+    { name: 'REST API Integration', level: 83, icon: 'fas fa-plug', color: '#10b981' },
+    { name: 'Git / GitHub', level: 85, icon: 'fab fa-git-alt', color: '#f05032' },
 ]
 
 export default function Skills() {
@@ -38,7 +38,25 @@ export default function Skills() {
                     <div className="skill-item" key={s.name}
                         data-aos="fade-left" data-aos-delay={i * 80}>
                         <div className="skill-header">
-                            <span>{s.name}</span>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                {s.icon === 'ts-badge' ? (
+                                    <span style={{
+                                        background: '#3178c6',
+                                        color: '#fff',
+                                        fontSize: '0.6rem',
+                                        fontWeight: 800,
+                                        borderRadius: '4px',
+                                        padding: '1px 4px',
+                                        width: '18px',
+                                        textAlign: 'center',
+                                        flexShrink: 0,
+                                        letterSpacing: '0.5px',
+                                    }}>TS</span>
+                                ) : (
+                                    <i className={s.icon} style={{ color: s.color, fontSize: '1.1rem', width: '18px', textAlign: 'center' }} />
+                                )}
+                                {s.name}
+                            </span>
                             <span>{s.level}%</span>
                         </div>
                         <div className="skill-bar">
